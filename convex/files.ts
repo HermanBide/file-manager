@@ -33,10 +33,10 @@ export const createFile = mutation({
 });
 
 ///////////////
-
+//allows user to upload file to storage
 export const generateUploadUrl = mutation(async (ctx) => {
   const identity = await ctx.auth.getUserIdentity();
-
+//check if user is authenticated 
   if (!identity) {
     throw new ConvexError("you must be logged in to upload a file");
   }
