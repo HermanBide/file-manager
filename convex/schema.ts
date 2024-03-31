@@ -5,7 +5,9 @@ export const fileTypes = v.union(
   v.literal("image"),
   v.literal("csv"),
   v.literal("pdf"),
-  v.literal("png")
+  v.literal("png"),
+  v.literal("svg"),
+  v.literal("docx"),
 );
 
 export const roles = v.union(v.literal("admin"), v.literal("member"));
