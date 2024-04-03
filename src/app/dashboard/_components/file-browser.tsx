@@ -2,7 +2,7 @@
 import { useOrganization, useUser } from "@clerk/nextjs";
 import { useQuery } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
-import { UploadButton } from "./upload-button";
+import  UploadButton  from "./upload-button";
 import { FileCard } from "./file-card";
 import { GridIcon, Loader2, RowsIcon } from "lucide-react";
 import { SearchBar } from "./search-bar";
@@ -81,6 +81,7 @@ export function FileBrowser({
         (favorite) => favorite.fileId === file._id
       ),
     })) ?? [];
+    
 
   return (
     <div>

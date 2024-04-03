@@ -15,31 +15,15 @@ import { Doc } from "../../../../convex/_generated/dataModel";
   import Image from "next/image";
   import { FileCardActions } from "./file-actions";
 
-  interface File {
-    url: boolean;
-    isFavorited: boolean;
-    _id: string;
-    _creationTime: number;
-    shouldDelete?: boolean;
-    name: string;
-    type: "image" | "csv" | "pdf" | "png";
-    orgId: string;
-    fileId: string;
-    userId: string;
-  }
   
-  interface FileCardProps {
-    file: File;
-  }
-  
+
 
 export const FileCard = ({
   file,
-}: 
-FileCardProps
-// {
-  // file: Doc<"files"> & { isFavorited: boolean; url: string | null };
-// }
+}: {
+
+  file: Doc<"files"> & { isFavorited: boolean; url: string | null };
+}
 ) => {
   const userProfile = useQuery(api.users.getUserProfile, {
     userId: file.userId,
